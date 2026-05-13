@@ -1,0 +1,25 @@
+@use "sass:color";
+@use 'base/variables' as v;
+
+.acciones{
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: space-between;
+
+    &--centrar{
+        @extend .acciones;
+        justify-content: center;
+    }
+
+    &__enlace{
+        color: v.$negro;
+        font-size: 2rem;
+        font-weight: v.$delgada;
+
+        &:hover{
+            color: color.adjust(v.$azul, $lightness: -20%);
+            text-decoration: underline;
+        }
+    }
+}
